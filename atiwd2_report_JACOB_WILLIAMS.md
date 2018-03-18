@@ -13,7 +13,7 @@ Advanced Topics in Web Development 2 Report
     * [rupert_st.xml](https://github.com/SnoozyRests/atiwd2/blob/master/xml/original/rupert_st.xml)  
     * [wells_rd.xml](https://github.com/SnoozyRests/atiwd2/blob/master/xml/original/wells_rd.xml)
 ---  
-3. Script for normalising the xml data:  
+3. Script for normalising the XML data:  
     * [createNO2](https://github.com/SnoozyRests/atiwd2/blob/master/php/createNO2.php) 
 4. Creates the XML files:  
     * [brislington_NO2.xml](https://github.com/SnoozyRests/atiwd2/blob/master/xml/no2/brislington_NO2.xml)  
@@ -22,3 +22,12 @@ Advanced Topics in Web Development 2 Report
     * [parson_st_NO2.xml](https://github.com/SnoozyRests/atiwd2/blob/master/xml/no2/parson_st_NO2.xml)  
     * [rupert_st_NO2.xml](https://github.com/SnoozyRests/atiwd2/blob/master/xml/no2/rupert_st_NO2.xml)  
     * [wells_rd_NO2.xml](https://github.com/SnoozyRests/atiwd2/blob/master/xml/no2/wells_rd_NO2.xml)  
+---
+5. HTML files for creating the charts / graphs:  
+    * [scatterChart.html](https://github.com/SnoozyRests/atiwd2/blob/master/charts/scatterChart.html)  
+    * [lineGraph.html](https://github.com/SnoozyRests/atiwd2/blob/master/charts/lineGraph.html)  
+6. Scripts for providing data to the HTML files:  
+    * [yearJSON.php](https://github.com/SnoozyRests/atiwd2/blob/master/charts/yearJSON.php)  
+    * [dayJSON.php](https://github.com/SnoozyRests/atiwd2/blob/master/charts/dayJSON.php)  
+---  
+
