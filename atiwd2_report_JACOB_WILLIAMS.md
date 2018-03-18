@@ -4,15 +4,15 @@ Advanced Topics in Web Development 2 Report
 
 ## All Files
 1. Script for extracting data from CSV and creating XML Files  
-    * [CSVExtract](https://github.com/SnoozyRests/atiwd2/blob/master/php/CSVExtract.php)
-  
+    * [CSVExtract](https://github.com/SnoozyRests/atiwd2/blob/master/php/CSVExtract.php)  
 2. Creates the XML files:  
     * [brislington.xml](https://github.com/SnoozyRests/atiwd2/blob/master/xml/original/brislington.xml)  
     * [fishponds.xml](https://github.com/SnoozyRests/atiwd2/blob/master/xml/original/fishponds.xml)  
     * [newfoundland_way.xml](https://github.com/SnoozyRests/atiwd2/blob/master/xml/original/newfoundland_way.xml)  
     * [parson_st.xml](https://github.com/SnoozyRests/atiwd2/blob/master/xml/original/parson_st.xml)  
     * [rupert_st.xml](https://github.com/SnoozyRests/atiwd2/blob/master/xml/original/rupert_st.xml)  
-    * [wells_rd.xml](https://github.com/SnoozyRests/atiwd2/blob/master/xml/original/wells_rd.xml)  
+    * [wells_rd.xml](https://github.com/SnoozyRests/atiwd2/blob/master/xml/original/wells_rd.xml)
+---  
 3. Script for normalising the xml data:  
     * [createNO2](https://github.com/SnoozyRests/atiwd2/blob/master/php/createNO2.php) 
 4. Creates the XML files:  
