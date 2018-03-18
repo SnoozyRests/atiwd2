@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<!-- 
+    Author: Jacob Williams
+    Desc: Page for displaying a scatter chart of imported JSON data.
+    Notes: n/a
+    Sources: https://developers.google.com/chart/interactive/docs/php_example
+             https://www.quirksmode.org/blog/archives/2005/12/the_ajax_respon.html
+             https://stackoverflow.com/questions/17662441/showing-google-chart-dynamically-in-div-using-php-and-ajax
+-->
+<html>
+    <head>
+        <title>Scatter Chart</title>
+        <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+        <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <script type="text/javascript">
+        function run(){    
+            google.charts.load('current', {'packages':['corechart']});
+            google.charts.setOnLoadCallback(drawChart);
+            function drawChart(){
+              
+                var time = document.getElementById("time").value;
+                
+                var date = document.getElementById("dates").value;
+
+                var getlocation = document.getElementById("location");
+                var path = getlocation.options[getlocation.selectedIndex].value;
+                var location = getlocation.options[getlocation.selectedIndex].text;
+                
+                var data;
+                var json = "yearJSON.php";
+                var p = "location="+path+"&time="+time+":00"+"&date="+date;
+                
+                var xhttp = new XMLHttpRequest();
+                xhttp.open("POST", json, false);
+                xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+                xhttp.onreadystatechange = function(){
+                    if(xhttp.readyState==4 && xhttp.status==200){
+                        data = xhttp.responseText;
+                    }
+                }
+                xhttp.send(p);
+                
+                var data = new google.visualization.DataTable(data);
+                var options = {
+                    title: "no2 over time in " + p
+                };
+                var chart = new google.visualization.ScatterChart(document.getElementById("chart_div"));
+                chart.draw(data, options);
+            }
+        }
+        </script>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div id="chart_div"></div>
+        <input id="time" type="time" name="time" step="900"><br/>
+        <select id="dates">
+            <option value="2015">2015</option>
+            <option value="2016">2016</option>
+            <option value="2017">2017</option>
+        </select><br/>
+        <select id="location">
+            <option value="../xml/no2/brislington_NO2.xml">Brislington</option>
+            <option value="../xml/no2/fishponds_NO2.xml">Fishponds</option>
+            <option value="../xml/no2/newfoundland_way_NO2.xml">NewFoundLand Way</option>
+            <option value="../xml/no2/parson_st_NO2.xml">Parson Street</option>
+            <option value="../xml/no2/rupert_st_NO2.xml">Rupert Street</option>
+            <option value="../xml/no2/wells_rd_NO2.xml">Wells Road</option>
+        </select><br/>
+        <input id="load" type="button" value="load data" onclick="run();">
+    </body>
+</html>
