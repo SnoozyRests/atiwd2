@@ -31,8 +31,7 @@ Advanced Topics in Web Development 2 Report
     * [dayJSON.php](https://github.com/SnoozyRests/atiwd2/blob/master/charts/dayJSON.php)  
 ---  
 ## XML Parsers: DOM VS STREAM  
-Both DOM and Stream parsers are used in development, and they both have features    
-suited towards different situations. DOM parsers are object based and load the    
+Both DOM and Stream parsers are used in development, and they both have features suited towards different situations. DOM parsers are object based and load the    
 entire XML file into memory for parsing, this means that if the file is    
 exceptionally large, the DOM parser will use up a larger amount of memory. DOM  
 parser work by parsing an entire file and creating a DOM tree which is then   
