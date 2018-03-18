@@ -31,11 +31,11 @@ Advanced Topics in Web Development 2 Report
     * [dayJSON.php](https://github.com/SnoozyRests/atiwd2/blob/master/charts/dayJSON.php)  
 ---  
 ## XML Parsers: DOM VS STREAM  
-Both DOM and Stream parsers are used in development, and they both have features suited towards different situations.  
+Both DOM and Stream parsers are used in development and they both have features suited towards different situations.  
 DOM parsers are object based and load the entire XML file into memory for parsing, this means that if the file is  
 exceptionally large, the DOM parser will use up a larger amount of memory. DOM parser work by parsing an entire file   
 and creating a DOM tree which is then returned to the user for processing. Stream parsers however are event based  
-parsers, and doesnt store the XML as it reads it. Stream parsers work by encountering a <tag> and triggering an event  
+parsers, and don't store the XML as it reads it. Stream parsers work by encountering a <tag> and triggering an event  
 that a tag has started, it then parses through until it reaches a </tag>, whence it triggers a tag ended event.  
 
 DOM and stream parsers also provide some varying functionalities. DOM parsers are read / write which means you can   
@@ -44,12 +44,16 @@ means you can only view data parsed by the parser, and not edit the file in any 
 backwards navigation, allowing you to reverse back up through the created tree to view previous nodes. Stream parsers    
 however are linear in operation, and do not support backwards navigation.
 
-From these points, one may assume that DOM parsers are the only real choice for  parsers. This would be wrong to   
+From these points, one may assume that DOM parsers are the only real choice for parsers. This would be wrong to   
 assume, as DOM parsers, due to their increasing memory usage, can become very taxing when using larger amounts of data.    
 Furthermore, the functionality of DOM parsers are lost when you only desire to parse documents to retrieve data, the   
 functionality of writing isnt needed when your parser only needs to read. Stream parsers are also much better at parsing    
 large files, due to the fact that they do not store data in memory, meaning they use generally significantly fewer   
 resources.
 
-Concluding, I believe which parser you should use is entirely context dependent, if you need to edit data is it works,  
+Concluding, I believe which parser you should use is entirely context dependent, if you need to edit data as it works,  
 use DOM. If you just need to get certain data fast, use Stream.
+---
+## Chart and Data Visualisation
+
+

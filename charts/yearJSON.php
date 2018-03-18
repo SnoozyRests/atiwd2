@@ -14,7 +14,7 @@ $location = $_REQUEST["location"];
 $time = $_REQUEST["time"];
 $date = $_REQUEST["date"];
 
-//load specified xml, perform 
+//load specified xml, perform Xpath query
 $xml = simplexml_load_file($location);
 $results = $xml->xpath("//reading[@time='$time' and contains(@date, '$date')]");
 
