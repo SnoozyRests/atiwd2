@@ -17,49 +17,83 @@
             google.charts.load('current', {'packages':['corechart']});
             google.charts.setOnLoadCallback(drawChart);
             function drawChart(){
-              
+                //get time and date from form
                 var time = document.getElementById("time").value;
-                
                 var date = document.getElementById("dates").value;
-
+                
+                //get location details from form
                 var getlocation = document.getElementById("location");
                 var path = getlocation.options[getlocation.selectedIndex].value;
                 var location = getlocation.options[getlocation.selectedIndex].text;
                 
+                //create data variable, specify json script
                 var data;
                 var json = "yearJSON.php";
+                
+                //format paramters to send.
                 var p = "location="+path+"&time="+time+":00"+"&date="+date;
                 
-                var xhttp = new XMLHttpRequest();
-                xhttp.open("POST", json, false);
-                xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-                xhttp.onreadystatechange = function(){
-                    if(xhttp.readyState==4 && xhttp.status==200){
-                        data = xhttp.responseText;
+                //begin the XMLHTTP request to the JSON file
+                var xmlhttp = new XMLHttpRequest();
+                xmlhttp.open("POST", json, false);
+                xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+                xmlhttp.onreadystatechange = function(){
+                    if(xmlhttp.readyState==4 && xmlhttp.status==200){
+                        data = xmlhttp.responseText;
                     }
                 }
-                xhttp.send(p);
+                xmlhttp.send(p);
                 
+                //process acquired data with google function.
                 var data = new google.visualization.DataTable(data);
+                
+                //specify options for table
                 var options = {
-                    title: "no2 over time in " + p
+                    //general options
+                    title: "NO2 Over Time In " + location,
+                    pointShape: 'diamond',
+                    color: '#BDB76B', //doesnt work?
+                    //table axis labels.
+                    hAxis: {title:"Time"},
+                    vAxis: {title:"NO2 Quantity"},
+                    
+                    //creates a line to show the trend of the values.
+                    trendlines: {
+                        0: {
+                            type: 'polynomial',
+                            color: 'red',
+                            lineWidth: 3,
+                            opacity: 0.3,
+                            showR2: true,
+                            visibleInLegend: true,
+                            labelInLegend: 'Trend'
+                        }
+                    }
                 };
+                //draw the chart
                 var chart = new google.visualization.ScatterChart(document.getElementById("chart_div"));
                 chart.draw(data, options);
             }
         }
+
         </script>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <body>
+        <!-- Specifies chart area -->
         <div id="chart_div"></div>
+        
+        <!-- Time input -->
         <input id="time" type="time" name="time" step="900"><br/>
+        <!-- Drop down for dates -->
         <select id="dates">
             <option value="2015">2015</option>
             <option value="2016">2016</option>
             <option value="2017">2017</option>
         </select><br/>
+        <!-- Drop down with all of the locations, retrievable value is the
+            direct path to the XML file for that area. -->
         <select id="location">
             <option value="../xml/no2/brislington_NO2.xml">Brislington</option>
             <option value="../xml/no2/fishponds_NO2.xml">Fishponds</option>
@@ -68,6 +102,7 @@
             <option value="../xml/no2/rupert_st_NO2.xml">Rupert Street</option>
             <option value="../xml/no2/wells_rd_NO2.xml">Wells Road</option>
         </select><br/>
+        <!-- Submit button -->
         <input id="load" type="button" value="load data" onclick="run();">
     </body>
 </html>
