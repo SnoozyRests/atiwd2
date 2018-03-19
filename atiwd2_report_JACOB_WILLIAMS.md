@@ -76,6 +76,6 @@ the levels of NO2 at a glance, they can see whether levels are on a low or on th
 The linegraph has similar improvements to the scatter chart, with a few html elements being included  
 alongside it to make navigation easier, including:  
 1. A html5 date selector.  
-2. A drop down list for the stations.  
+2. A drop down list for the stations.    
 Following from the scatterchart, I also added a trendline to the graph, for the same reason I did the  
 scatter graph.
