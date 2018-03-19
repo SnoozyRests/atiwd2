@@ -96,9 +96,9 @@
     </head>
     <body>
         <div id="chart_div"></div>
-        <input id="date" type="date" name="date"><br>
+        <input id="date" type="date" name="date" value="2016-03-31"><br>
         <select id="location">
-            <option value="../xml/no2/brislington_NO2.xml">Brislington</option>
+            <option value="../xml/no2/brislington_NO2.xml" selected="selected">Brislington</option>
             <option value="../xml/no2/fishponds_NO2.xml">Fishponds</option>
             <option value="../xml/no2/newfoundland_way_NO2.xml">NewFoundLand Way</option>
             <option value="../xml/no2/parson_st_NO2.xml">Parson Street</option>
@@ -106,6 +106,8 @@
             <option value="../xml/no2/wells_rd_NO2.xml">Wells Road</option>
         </select><br>
         <input id="load" type="button" value="load data" onclick="run();">
-        
+        <script>
+            run();
+        </script>
     </body>
 </html>
