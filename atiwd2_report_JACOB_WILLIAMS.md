@@ -53,6 +53,7 @@ resources.
 
 Concluding, I believe which parser you should use is entirely context dependent, if you need to edit data as it works,
 use DOM. If you just need to get certain data fast, use Stream.  
+
 ---
 ## Chart and Data Visualisation
 
