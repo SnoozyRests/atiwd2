@@ -59,7 +59,7 @@ use DOM. If you just need to get certain data fast, use Stream.
 
 **Scatter Chart**  
 To improve the visualisation and functionality of the scatter chart I added a few html elements that allowed the  
-refining of the data searching, namely these were:
+refining of the data searching, namely these were:  
     1. A drop down list for the stations.  
     2. A drop down list for the years.  
     3. A time input box.  
