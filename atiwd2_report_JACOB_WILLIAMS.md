@@ -26,9 +26,8 @@ Advanced Topics in Web Development 2 Report
 5. HTML files for creating the charts / graphs:  
     * [scatterChart.html](https://github.com/SnoozyRests/atiwd2/blob/master/charts/scatterChart.html)  
     * [lineGraph.html](https://github.com/SnoozyRests/atiwd2/blob/master/charts/lineGraph.html)  
-6. Scripts for providing data to the HTML files:  
-    * [yearJSON.php](https://github.com/SnoozyRests/atiwd2/blob/master/charts/yearJSON.php)  
-    * [dayJSON.php](https://github.com/SnoozyRests/atiwd2/blob/master/charts/dayJSON.php)  
+6. Script for providing data to scatterChart.html:  
+    * [yearJSON.php](https://github.com/SnoozyRests/atiwd2/blob/master/charts/yearJSON.php)   
 ---  
 ## XML Parsers: DOM VS STREAM  
 Both DOM and Stream parsers are used in development and they both have features suited towards different situations.  
