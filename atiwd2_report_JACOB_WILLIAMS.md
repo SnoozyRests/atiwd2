@@ -28,6 +28,8 @@ Advanced Topics in Web Development 2 Report
     * [lineGraph.html](https://github.com/SnoozyRests/atiwd2/blob/master/charts/lineGraph.html)  
 6. Script for providing data to scatterChart.html:  
     * [yearJSON.php](https://github.com/SnoozyRests/atiwd2/blob/master/charts/yearJSON.php)   
+
+All sources used to program are included in the header of the relevant files.
 ---  
 ## XML Parsers: DOM VS STREAM  
 Both DOM and Stream parsers are used in development and they both have features suited towards different situations.  
@@ -69,3 +71,11 @@ retrieve all the data required for the graph.
 I also added a trendline to the scatter graph, given the nature of a scatter graph it can be difficult to  
 ascertain just what the data is implying. By adding this trend curve the user can get a basic idea of  
 the levels of NO2 at a glance, they can see whether levels are on a low or on the rise quickly.
+
+**Linegraph**  
+The linegraph has similar improvements to the scatter chart, with a few html elements being included  
+alongside it to make navigation easier, including:  
+1. A html5 date selector.  
+2. A drop down list for the stations.  
+Following from the scatterchart, I also added a trendline to the graph, for the same reason I did the  
+scatter graph.
