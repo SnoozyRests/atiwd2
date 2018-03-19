@@ -56,4 +56,17 @@ use DOM. If you just need to get certain data fast, use Stream.
 ---
 ## Chart and Data Visualisation
 
+**Scatter Chart**  
+To improve the visualisation and functionality of the scatter chart I added a few html elements that allowed the  
+refining of the data searching, namely these were:  
+    * A drop down list for the stations.  
+    * A drop down list for the years.  
+    * A time input box.  
+These give the user the ability to change the data being displayed on the graph at the click of a button, rather  
+than having to reload the page each time a change needs to be made. Further on this, it also means that the  
+script for retrieving the data doesnt have to be changed each time, meaning that a single script can be used to  
+retrieve all the data required for the graph.  
+I also added a trendline to the scatter graph, given the nature of a scatter graph it can be difficult to  
+ascertain just what the data is implying. By adding this trend curve the user can get a basic idea of  
+the levels of NO2 at a glance, they can see whether levels are on a low or on the rise quickly.
 

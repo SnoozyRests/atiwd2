@@ -52,7 +52,6 @@
                     //general options
                     title: "NO2 Over Time In " + location,
                     pointShape: 'diamond',
-                    color: '#BDB76B', //doesnt work?
                     //table axis labels.
                     hAxis: {title:"Time"},
                     vAxis: {title:"NO2 Quantity"},
@@ -75,7 +74,6 @@
                 chart.draw(data, options);
             }
         }
-
         </script>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -88,19 +86,20 @@
         <input id="time" type="time" name="time" step="900"><br/>
         <!-- Drop down for dates -->
         <select id="dates">
+            <option value="2014">2014</option>
             <option value="2015">2015</option>
             <option value="2016">2016</option>
             <option value="2017">2017</option>
         </select><br/>
         <!-- Drop down with all of the locations, retrievable value is the
             direct path to the XML file for that area. -->
-        <select id="location">
-            <option value="../xml/no2/brislington_NO2.xml">Brislington</option>
-            <option value="../xml/no2/fishponds_NO2.xml">Fishponds</option>
-            <option value="../xml/no2/newfoundland_way_NO2.xml">NewFoundLand Way</option>
-            <option value="../xml/no2/parson_st_NO2.xml">Parson Street</option>
-            <option value="../xml/no2/rupert_st_NO2.xml">Rupert Street</option>
-            <option value="../xml/no2/wells_rd_NO2.xml">Wells Road</option>
+        <select name= "location" id="location">
+            <option id="brislington" value="../xml/no2/brislington_NO2.xml">Brislington</option>
+            <option id="fishponds" value="../xml/no2/fishponds_NO2.xml">Fishponds</option>
+            <option id="newfoundland" value="../xml/no2/newfoundland_way_NO2.xml">NewFoundLand Way</option>
+            <option id="parson" value="../xml/no2/parson_st_NO2.xml">Parson Street</option>
+            <option id="rupert" value="../xml/no2/rupert_st_NO2.xml">Rupert Street</option>
+            <option id="wells" value="../xml/no2/wells_rd_NO2.xml">Wells Road</option>
         </select><br/>
         <!-- Submit button -->
         <input id="load" type="button" value="load data" onclick="run();">
