@@ -61,10 +61,12 @@ use DOM. If you just need to get certain data fast, use Stream.
 
 **Scatter Chart**  
 To improve the visualisation and functionality of the scatter chart I added a few HTML elements that allowed the  
-refining of the data searching, namely these were:  
+refining of the data searching, namely these were: 
+
     1. A drop down list for the stations.  
     2. A drop down list for the years.  
     3. A time input box.  
+    
 These give the user the ability to change the data being displayed on the graph at the click of a button, rather  
 than having to reload the page each time a change needs to be made. Further on this, it also means that the  
 script for retrieving the data doesnt have to be changed each time, meaning that a single script can be used to  
@@ -77,7 +79,9 @@ the levels of NO2 at a glance, they can see whether levels are on a low or on th
 **Linegraph**  
 The linegraph has similar improvements to the scatter chart, with a few html elements being included  
 alongside it to make navigation easier, including:  
+
     1. A html5 date selector.  
-    2. A drop down list for the stations.    
+    2. A drop down list for the stations.  
+    
 Following from the scatterchart, I also added a trendline to the graph, for the same reason I did the  
 scatter graph.
