@@ -42,18 +42,18 @@
                             data.addColumn('number', 'no2 levels');
                             
                             //get all of the readings.
-                            var readings = xml.getElementsByTagName("reading");
+                            var results = xml.getElementsByTagName("reading");
                             
                             //loop over retrieved readings and get all that match
                             // the supplied date.
-                            for(var i=0; i < readings.length; i++){
-                                if(readings[i].getAttribute("date") == date){
+                            for(var i=0; i < results.length; i++){
+                                if(results[i].getAttribute("date") == date){
                                     //get time value, format time.
-                                    var time = readings[i].getAttribute("time");
+                                    var time = results[i].getAttribute("time");
                                     var timetemp = time.split(":");
                                     var newtime = [parseInt(timetemp[0]), parseInt(timetemp[1]), parseInt(timetemp[2])];
                                     //get value of reading
-                                    var val = readings[i].getAttribute("val");
+                                    var val = results[i].getAttribute("val");
                                     
                                     //add the data to the store.
                                     data.addRow([newtime, parseInt(val)]);
