@@ -26,9 +26,9 @@ Advanced Topics in Web Development 2 Report
 ---
 5. HTML files for creating the charts / graphs:  
     * Source:[scatterChart.html](https://github.com/SnoozyRests/atiwd2/blob/master/charts/scatterChart.html)  
-    * CEMS: [scatterChart.html](http://www.cems.uwe.ac.uk/~jj6-williams/atiwd2/charts/scatterChart.html)
+    * CEMS Visualisation: [scatterChart.html](http://www.cems.uwe.ac.uk/~jj6-williams/atiwd2/charts/scatterChart.html)
     * Source: [lineGraph.html](https://github.com/SnoozyRests/atiwd2/blob/master/charts/lineGraph.html)  
-    * CEMS: [lineGraph.html](http://www.cems.uwe.ac.uk/~jj6-williams/atiwd2/charts/lineGraph.html)  
+    * CEMS Visualisation: [lineGraph.html](http://www.cems.uwe.ac.uk/~jj6-williams/atiwd2/charts/lineGraph.html)  
 6. Script for providing data to scatterChart.html:  
     * [yearJSON.php](https://github.com/SnoozyRests/atiwd2/blob/master/charts/yearJSON.php)   
 
