@@ -24,7 +24,11 @@
                     //initialise and get all variables.
                     var temp = document.getElementById("date").value;
                     var temp2 = temp.split("-");
+                    
+                    //date format outputted is different to the required format.
                     var date = temp2[2]+"/"+temp2[1]+"/"+temp2[0];
+                    
+                    //various location variables, used for different functios.
                     var getlocation = document.getElementById("location");
                     var path = getlocation.options[getlocation.selectedIndex].value;
                     var location = getlocation.options[getlocation.selectedIndex].text;
@@ -67,6 +71,8 @@
                                 //general table variables.
                                 title: 'no2 levels',
                                 curveType: 'function',
+                                
+                                //define axis parameters.
                                 hAxis: {title:"Time"},
                                 vAxis: {title:"NO2 Quantity"},
                                 
@@ -79,6 +85,7 @@
                                       opacity: 0.3,
                                       showR2: true,
                                       visibleInLegend: true,
+                                      //doesnt fully overwrite the label(?)
                                       labelInLegend: 'Trend'
                                     }
                                 }

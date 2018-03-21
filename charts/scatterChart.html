@@ -13,9 +13,13 @@
         <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
         <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
         <script type="text/javascript">
-        function run(){    
+        function run(){   
+            //Google chart libraries
             google.charts.load('current', {'packages':['corechart']});
             google.charts.setOnLoadCallback(drawChart);
+            
+            //drawChart function internal of a seperate function allows you to
+            // call the draw function on a form change or submit.
             function drawChart(){
                 //get time and date from form
                 var time = document.getElementById("time").value;
@@ -42,6 +46,8 @@
                         data = xmlhttp.responseText;
                     }
                 }
+                
+                //send the parameters.
                 xmlhttp.send(p);
                 
                 //process acquired data with google function.
@@ -59,7 +65,7 @@
                     //creates a line to show the trend of the values.
                     trendlines: {
                         0: {
-                            type: 'polynomial',
+                            type: 'exponential',
                             color: 'red',
                             lineWidth: 3,
                             opacity: 0.3,
@@ -69,6 +75,7 @@
                         }
                     }
                 };
+                
                 //draw the chart
                 var chart = new google.visualization.ScatterChart(document.getElementById("chart_div"));
                 chart.draw(data, options);
